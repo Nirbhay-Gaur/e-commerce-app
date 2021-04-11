@@ -1,0 +1,13 @@
+.checkoutProduct {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.checkoutProduct-info {
+  padding-left: 4rem;
+}
+
+.checkoutProduct-qty > select {
+  width: 3rem;
+}
