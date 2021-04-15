@@ -1,0 +1,32 @@
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.product-info-img {
+  max-height: 30rem;
+}
+
+.product-info-description {
+  font-size: 0.8rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.product-info-sidebox {
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.add-to-cart-button {
+  height: 30px;
+  width: 30rem;
+  margin-top: 1rem;
+  padding: 1px;
+  border-radius: 2px;
+}

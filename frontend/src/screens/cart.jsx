@@ -3,7 +3,7 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 import Subtotal from "../components/subtotal";
 import Alert from "react-bootstrap/Alert";
 import { Link } from "react-router-dom";
@@ -27,7 +27,9 @@ function Cart(props) {
     }
   }, [dispatch, productId, qty]);
 
-  const removeFromCartHandler = (id) => {};
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   return (
     <Container className="my-5">
@@ -45,12 +47,16 @@ function Cart(props) {
                 {cartItems.map((item, i) => (
                   <div key={i}>
                     <div className="checkoutProduct">
-                      <Image src={item.image} thumbnail />
+                      <Image
+                        className="checkoutProduct-img"
+                        src={item.image}
+                        thumbnail
+                      />
 
                       <div className="checkoutProduct-info">
                         <div className="checkoutProduct-title">
                           <Link to={`/product/${item.product}`}>
-                            {item.title}
+                            {item.name}
                           </Link>
                         </div>
                         <div className="checkoutProduct-price">
@@ -76,7 +82,7 @@ function Cart(props) {
                         <Button
                           variant="danger"
                           size="sm"
-                          onClick={removeFromCartHandler(item.product)}
+                          onClick={() => removeFromCartHandler(item.product)}
                         >
                           Delete
                         </Button>

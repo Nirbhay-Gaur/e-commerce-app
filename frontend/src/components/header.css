@@ -1,0 +1,36 @@
+.header {
+  background-color: #131418;
+}
+
+.header-content {
+  position: relative;
+  left: 26rem;
+}
+
+.cart-link {
+  position: relative;
+  top: -2px;
+}
+
+.cart-icon {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cart-icon:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cart-icon:active,
+.signin-link:active {
+  color: #fff !important;
+}
+
+#signin-link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none !important;
+}
+
+#signin-link:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}

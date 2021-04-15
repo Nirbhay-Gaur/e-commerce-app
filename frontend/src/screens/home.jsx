@@ -5,6 +5,8 @@ import LoadingBox from "../components/loadingbox";
 import Alert from "react-bootstrap/Alert";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
+import "./home.css";
+import Footer from "../components/footer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -26,17 +28,20 @@ function Home() {
       ) : (
         <>
           <Carousel />
-          <div className="row mx-3">
-            {products.map((product) => (
-              <Product
-                key={product._id}
-                id={product._id}
-                title={product.title}
-                price={product.price}
-                img={product.image}
-              />
-            ))}
+          <div className="container-custom mt-4">
+            <div className="row justify-content-center">
+              {products.map((product) => (
+                <Product
+                  key={product._id}
+                  id={product._id}
+                  name={product.name}
+                  price={product.price}
+                  img={product.image}
+                />
+              ))}
+            </div>
           </div>
+          <Footer />
         </>
       )}
     </div>

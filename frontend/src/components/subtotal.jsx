@@ -13,31 +13,33 @@ function Subtotal(props) {
   };
 
   return (
-    <div className="subtotal">
-      <CurrencyFormat
-        renderText={(value) => (
-          <>
-            <p>
-              Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items):{" "}
-              <strong>{value}</strong>
-            </p>
-          </>
-        )}
-        decimalScale={2}
-        fixedDecimalScale={true}
-        value={cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"₹"}
-      />
-      <Button
-        type="button"
-        onClick={checkoutHandler}
-        disabled={cartItems.length === 0}
-        className="checkout-button"
-      >
-        Proceed to Checkout
-      </Button>
+    <div className="subtotal-sticky">
+      <div className="subtotal">
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <p>
+                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items):{" "}
+                <strong>{value}</strong>
+              </p>
+            </>
+          )}
+          decimalScale={2}
+          fixedDecimalScale={true}
+          value={cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"₹"}
+        />
+        <Button
+          type="button"
+          onClick={checkoutHandler}
+          disabled={cartItems.length === 0}
+          className="checkout-button"
+        >
+          Proceed to Checkout
+        </Button>
+      </div>
     </div>
   );
 }

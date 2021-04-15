@@ -1,0 +1,21 @@
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-steps > div {
+  border-top: 0.35rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding-top: 0.5rem;
+  margin-top: 0.05rem;
+  padding-left: 5rem;
+  font-weight: 600;
+}
+
+.checkout-steps > div.active {
+  border-top-color: #0069d9;
+  color: #0069d9;
+}

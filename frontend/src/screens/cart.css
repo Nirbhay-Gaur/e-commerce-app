@@ -11,3 +11,9 @@
 .checkoutProduct-qty > select {
   width: 3rem;
 }
+
+.checkoutProduct-img {
+  width: 50%;
+  height: 15vw;
+  object-fit: cover;
+}
