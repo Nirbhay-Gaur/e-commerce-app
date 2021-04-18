@@ -35,7 +35,7 @@ function Shipping(props) {
 
   return (
     <div>
-      <CheckoutSteps step1 step2 />
+      <CheckoutSteps step1 />
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="fullName">
           <Form.Label>Name</Form.Label>

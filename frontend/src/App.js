@@ -10,6 +10,7 @@ import ProductInfo from "./screens/productinfo";
 import Cart from "./screens/cart";
 import Shipping from "./screens/shipping";
 import PaymentMethod from "./screens/payment";
+import PlaceOrder from "./screens/placeOrder";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className="app">
         <Header />
         <Switch>
+          <Route path="/placeorder" component={PlaceOrder} />
           <Route path="/payment" component={PaymentMethod} />
           <Route path="/shipping" component={Shipping} />
           <Route path="/cart/:id?" component={Cart} />
