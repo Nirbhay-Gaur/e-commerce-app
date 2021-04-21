@@ -14,8 +14,6 @@ export const generateToken = (user) => {
     }
   );
 };
-<<<<<<< HEAD
-=======
 
 export const isAuth = (req, res, next) => {
   const authorization = req.headers.authorization;
@@ -33,4 +31,3 @@ export const isAuth = (req, res, next) => {
     res.status(401).send({ message: "No Token" });
   }
 };
->>>>>>> e5aa6cb (Add order screen)

@@ -12,11 +12,7 @@ function CarouselHome() {
           alt="First slide"
         />
         <Carousel.Caption>
-<<<<<<< HEAD
-          <h3>First slide label</h3>
-=======
           <h3>First carousel</h3>
->>>>>>> e5aa6cb (Add order screen)
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -28,11 +24,7 @@ function CarouselHome() {
         />
 
         <Carousel.Caption>
-<<<<<<< HEAD
-          <h3>Second slide label</h3>
-=======
           <h3>Second carousel</h3>
->>>>>>> e5aa6cb (Add order screen)
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,11 +36,7 @@ function CarouselHome() {
         />
 
         <Carousel.Caption>
-<<<<<<< HEAD
-          <h3>Third slide label</h3>
-=======
           <h3>Third carousel</h3>
->>>>>>> e5aa6cb (Add order screen)
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

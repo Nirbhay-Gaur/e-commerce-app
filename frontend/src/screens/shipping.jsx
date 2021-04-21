@@ -36,11 +36,7 @@ function Shipping(props) {
   return (
     <div>
       <CheckoutSteps step1 />
-<<<<<<< HEAD
-      <Form onSubmit={submitHandler}>
-=======
       <Form onSubmit={submitHandler} className="container mt-5">
->>>>>>> e5aa6cb (Add order screen)
         <Form.Group controlId="fullName">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -95,13 +91,9 @@ function Shipping(props) {
             ></Form.Control>
           </Form.Group>
         </Form.Row>
-<<<<<<< HEAD
-        <Button type="submit">Continue</Button>
-=======
         <div className="text-center mt-4">
           <Button type="submit">Continue</Button>
         </div>
->>>>>>> e5aa6cb (Add order screen)
       </Form>
     </div>
   );

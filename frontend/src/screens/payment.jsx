@@ -21,46 +21,6 @@ function PaymentMethod(props) {
   return (
     <div>
       <CheckoutSteps step1 step2 />
-<<<<<<< HEAD
-      <Form onSubmit={submitHandler}>
-        <Form.Group as="row">
-          <Form.Check
-            type="radio"
-            id="paypal"
-            label="PayPal"
-            value="PayPal"
-            name="paymentMethod"
-            required
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group as="row">
-          <Form.Check
-            type="radio"
-            id="stripe"
-            label="Stripe"
-            value="Stripe"
-            name="paymentMethod"
-            required
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group as="row">
-          <Form.Check
-            type="radio"
-            id="cod"
-            label="Cash on Delivery"
-            value="COD"
-            name="paymentMethod"
-            required
-            onChange={(e) => setPaymentMethod(e.target.value)}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Continue
-        </Button>
-      </Form>
-=======
       <div className="d-flex justify-content-center mt-5">
         <Form onSubmit={submitHandler}>
           <Form.Group as="row">
@@ -101,7 +61,6 @@ function PaymentMethod(props) {
           </Button>
         </Form>
       </div>
->>>>>>> e5aa6cb (Add order screen)
     </div>
   );
 }
