@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import CheckoutSteps from "../components/checkoutSteps";
-
-function PlaceOrder() {
-  return (
-    <div>
-      <CheckoutSteps step1 step2 step3 />
-=======
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
@@ -162,7 +153,6 @@ function PlaceOrder(props) {
           </Row>
         </Container>
       </div>
->>>>>>> e5aa6cb (Add order screen)
     </div>
   );
 }
