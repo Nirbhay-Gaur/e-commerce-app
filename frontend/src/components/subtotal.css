@@ -13,7 +13,11 @@
 .subtotal-sticky {
   display: block;
   position: fixed;
+<<<<<<< HEAD
   top: 7rem;
+=======
+  top: 7.4rem;
+>>>>>>> e5aa6cb (Add order screen)
   width: 100%;
 }
 

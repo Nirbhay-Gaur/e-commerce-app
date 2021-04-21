@@ -1,5 +1,9 @@
 import {
   ADD_TO_CART,
+<<<<<<< HEAD
+=======
+  CART_EMPTY,
+>>>>>>> e5aa6cb (Add order screen)
   CART_SAVE_PAYMENT_METHOD,
   CART_SAVE_SHIPPING_ADDRESS,
   REMOVE_FROM_CART,
@@ -33,6 +37,12 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
     case CART_SAVE_PAYMENT_METHOD:
       return { ...state, paymentMethod: action.payload };
 
+<<<<<<< HEAD
+=======
+    case CART_EMPTY:
+      return { ...state, cartItems: [] };
+
+>>>>>>> e5aa6cb (Add order screen)
     default:
       return state;
   }

@@ -3,6 +3,10 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
+<<<<<<< HEAD
+=======
+import orderRouter from "./routers/orderRouter.js";
+>>>>>>> e5aa6cb (Add order screen)
 
 dotenv.config();
 
@@ -19,6 +23,10 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/myapp", {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+<<<<<<< HEAD
+=======
+app.use("/api/orders", orderRouter);
+>>>>>>> e5aa6cb (Add order screen)
 
 app.get("/", (req, res) => {
   res.send("Server is ON!");

@@ -41,11 +41,19 @@ function SignUp(props) {
 
   console.log(error);
   return (
+<<<<<<< HEAD
     <Container>
       <Row>
         <Col>
           <Form onSubmit={submitHandler}>
             <div>
+=======
+    <Container className="my-4">
+      <Row className="d-flex justify-content-center">
+        <Col sm={4}>
+          <Form onSubmit={submitHandler}>
+            <div className="text-center">
+>>>>>>> e5aa6cb (Add order screen)
               <h1>Sign Up</h1>
             </div>
             {loading && <LoadingBox></LoadingBox>}
@@ -94,10 +102,19 @@ function SignUp(props) {
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </Form.Group>
+<<<<<<< HEAD
             <Button variant="primary" type="submit">
               Sign Up
             </Button>
             <div>
+=======
+            <div className="text-center">
+              <Button variant="primary" type="submit">
+                Sign Up
+              </Button>
+            </div>
+            <div className="text-center mt-3">
+>>>>>>> e5aa6cb (Add order screen)
               Already a Customer?{" "}
               <Link to={`/signin?redirect=${redirect}`}>Log in</Link>
             </div>

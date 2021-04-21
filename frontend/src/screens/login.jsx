@@ -35,11 +35,19 @@ function Login(props) {
   }, [props.history, redirect, userInfo]);
 
   return (
+<<<<<<< HEAD
     <Container>
       <Row>
         <Col>
           <Form onSubmit={submitHandler}>
             <div className="login-heading">
+=======
+    <Container className="my-5">
+      <Row className="d-flex justify-content-center">
+        <Col sm={4}>
+          <Form onSubmit={submitHandler}>
+            <div className="login-heading text-center">
+>>>>>>> e5aa6cb (Add order screen)
               <h1>Log in</h1>
             </div>
             {loading && <LoadingBox></LoadingBox>}
@@ -68,12 +76,20 @@ function Login(props) {
                 />
               </Form.Group>
             </div>
+<<<<<<< HEAD
             <div className="login-btn">
+=======
+            <div className="login-btn text-center">
+>>>>>>> e5aa6cb (Add order screen)
               <Button variant="primary" type="submit">
                 Login
               </Button>
             </div>
+<<<<<<< HEAD
             <div>
+=======
+            <div className="text-center mt-2">
+>>>>>>> e5aa6cb (Add order screen)
               New Customer?{" "}
               <Link to={`/register?redirect=${redirect}`}>
                 Create your account
