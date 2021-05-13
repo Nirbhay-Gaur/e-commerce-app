@@ -5,11 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "../actions/userActions";
 
-function Header() {
+function Header(props) {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
@@ -20,6 +20,7 @@ function Header() {
 
   const signoutHandler = () => {
     dispatch(signout());
+    props.history.push("/");
   };
 
   return (
@@ -27,22 +28,11 @@ function Header() {
       <Link to="/">
         <Navbar.Brand>MyApp 🚀</Navbar.Brand>
       </Link>
-      {/* <div className="header-content">
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button>
-            <span>
-              <SearchIcon />
-            </span>
-          </Button>
-        </Form>
-      </div> */}
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          {/* <Nav.Link>Account</Nav.Link>
-          <Nav.Link>Orders</Nav.Link> */}
           {userInfo ? (
             <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
               <NavDropdown.Item>
@@ -76,4 +66,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default withRouter(Header);

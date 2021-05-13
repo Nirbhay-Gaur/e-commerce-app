@@ -13,7 +13,7 @@ orderRouter.post(
       res.status(400).send({ message: "Cart is empty" });
     } else {
       const order = new Order({
-        orderItems: req.body.ordetItems,
+        orderItems: req.body.orderItems,
         shippingAddress: req.body.shippingAddress,
         paymentMethod: req.body.paymentMethod,
         itemsPrice: req.body.itemsPrice,
@@ -26,6 +26,19 @@ orderRouter.post(
       res
         .status(201)
         .send({ message: "New Order Created", order: createdOrder });
+    }
+  })
+);
+
+orderRouter.get(
+  "/:id",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send({ message: "Order Not Found" });
     }
   })
 );

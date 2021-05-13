@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <hr />
-      <p>App ⓒ {new Date().getFullYear()}</p>
+      <p>MyApp ⓒ {new Date().getFullYear()}</p>
     </footer>
   );
 }
